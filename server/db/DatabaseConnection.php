@@ -2,8 +2,8 @@
 class DatabaseConnection
 {
     private $host = 'aws.connect.psdb.cloud';
-    private $usuario = 'tzrmyvuv5rqqt9z5sr6u';
-    private $senha = 'pscale_pw_2Qzqh2uudBLhuuhkCWBX5hGJ1pvHWL9TQA6a2OYRS4G';
+    private $usuario = 'os4ckb30dbjxvvajyias';
+    private $senha = 'pscale_pw_sxcOrYOgmkGRT5N88nAliKQVhw3hUpOxXLyGtVVYyoZ';
     private $banco = 'ircompany';
     private $conexao;
 

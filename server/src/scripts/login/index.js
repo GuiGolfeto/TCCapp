@@ -10,7 +10,7 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
-document.getElementById('submitCad').addEventListener('click', function () {
+/* document.getElementById('submitCad').addEventListener('click', function () {
     var password = document.getElementById('password').value;
     var confirmPassword = document.getElementById('confirmPassword').value;
 
@@ -40,4 +40,30 @@ document.getElementById('submitCad').addEventListener('click', function () {
             text: "Cadastro feito com sucesso",
         });
     }
+}); */
+
+$(document).ready(function () {
+    $("#btnLogin").click(function () {
+        // Obter dados do formulário
+        var email = $("input[name='email']").val();
+        var senha = $("input[name='senha']").val();
+
+        // Fazer requisição AJAX
+        $.ajax({
+            type: "POST",
+            url: "../../DAO/loginDAO.php",
+            data: { email: email, senha: senha },
+            dataType: "json",
+            success: function (response) {
+                if (response.loginSucesso) {
+                    alert("Login bem-sucedido!");
+                } else {
+                    alert("Login falhou. Verifique suas credenciais.");
+                }
+            },
+            error: function () {
+                alert("Erro ao processar a solicitação.");
+            }
+        });
+    });
 });
