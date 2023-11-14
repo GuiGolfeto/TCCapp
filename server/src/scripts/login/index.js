@@ -51,7 +51,7 @@ $(document).ready(function () {
         // Fazer requisição AJAX
         $.ajax({
             type: "POST",
-            url: "../../DAO/loginDAO.php",
+            url: "../DAO/loginDAO.php",
             data: { email: email, senha: senha },
             dataType: "json",
             success: function (response) {
