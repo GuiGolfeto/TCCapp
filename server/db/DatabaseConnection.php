@@ -1,10 +1,10 @@
 <?php
 class DatabaseConnection
 {
-    private $host = 'seu_host';
-    private $usuario = 'seu_usuario';
-    private $senha = 'sua_senha';
-    private $banco = 'seu_banco';
+    private $host = 'aws.connect.psdb.cloud';
+    private $usuario = 'tzrmyvuv5rqqt9z5sr6u';
+    private $senha = 'pscale_pw_2Qzqh2uudBLhuuhkCWBX5hGJ1pvHWL9TQA6a2OYRS4G';
+    private $banco = 'ircompany';
     private $conexao;
 
     public function __construct()

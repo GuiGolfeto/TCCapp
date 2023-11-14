@@ -6,11 +6,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $email = $_POST['email'];
     $senha = $_POST['senha'];
-    $cpf = $_POST['cpf'];
-    $codigo_acesso = $_POST['codigo_acesso'];
-    $senha_ecac = $_POST['senha_ecac'];
 
-    if ($usuario->cadastrarUsuario($email, $senha, $cpf, $codigo_acesso, $senha_ecac)) {
+    if ($usuario->cadastrarUsuario($email, $senha)) {
         echo "Registro bem-sucedido";
     } else {
         echo "Erro ao registrar o usuário";
